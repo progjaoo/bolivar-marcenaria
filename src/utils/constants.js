@@ -1,0 +1,1 @@
+export const WHATSAPP_URL = "https://wa.me/5511999999999?text=" + encodeURIComponent("Olá! Gostaria de solicitar um projeto exclusivo de marcenaria.");

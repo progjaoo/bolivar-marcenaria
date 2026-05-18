@@ -1,5 +1,5 @@
-
 import { motion } from 'framer-motion';
+import { WHATSAPP_URL } from '../utils/constants';
 
 const Hero = () => {
   return (
@@ -46,7 +46,9 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <a
-            href="#contato"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-luxury-gold hover:bg-luxury-gold/90 text-white px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300"
           >
             Agendar Reunião com Consultor

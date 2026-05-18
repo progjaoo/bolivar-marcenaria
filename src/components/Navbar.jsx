@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { WHATSAPP_URL } from '../utils/constants';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,16 +17,16 @@ const Navbar = () => {
     { name: 'Diferenciais', href: '#diferenciais' },
     { name: 'Ambientes', href: '#ambientes' },
     { name: 'Processo', href: '#processo' },
-    { name: 'Portfólio', href: '#portfolio' },
+    { name: 'Portfólio', href: '#ambientes' },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-luxury-offwhite/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-8'}`}>
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center">
-          <span className={`text-2xl font-serif tracking-tighter transition-colors duration-500 ${isScrolled ? 'text-luxury-graphite' : 'text-white'}`}>
+          <a href="#" className={`text-2xl font-serif tracking-tighter transition-colors duration-500 ${isScrolled ? 'text-luxury-graphite' : 'text-white'}`}>
             MUVAZ
-          </span>
+          </a>
         </div>
 
         <div className="hidden md:flex items-center space-x-10">
@@ -42,7 +43,9 @@ const Navbar = () => {
 
         <div>
           <a
-            href="#contato"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`px-6 py-3 border text-xs tracking-[0.2em] uppercase transition-all duration-500 ${
               isScrolled
                 ? 'border-luxury-graphite text-luxury-graphite hover:bg-luxury-graphite hover:text-white'
