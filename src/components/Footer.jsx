@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Share2 } from 'lucide-react';
+import { Share2, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
               <li><a href="#diferenciais" className="hover:text-white transition-colors">Diferenciais</a></li>
               <li><a href="#ambientes" className="hover:text-white transition-colors">Ambientes</a></li>
               <li><a href="#processo" className="hover:text-white transition-colors">Processo</a></li>
-              <li><a href="#portfolio" className="hover:text-white transition-colors">Portfólio</a></li>
+              <li><a href="#ambientes" className="hover:text-white transition-colors">Portfólio</a></li>
             </ul>
           </div>
 

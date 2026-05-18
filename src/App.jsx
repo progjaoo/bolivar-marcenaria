@@ -7,8 +7,8 @@ import Features from './components/Features';
 import Showroom from './components/Showroom';
 import Process from './components/Process';
 import Testimonials from './components/Testimonials';
-import LeadForm from './components/LeadForm';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -63,17 +63,10 @@ function App() {
           <Testimonials />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          viewport={{ once: true }}
-        >
-          <LeadForm />
-        </motion.div>
       </main>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
