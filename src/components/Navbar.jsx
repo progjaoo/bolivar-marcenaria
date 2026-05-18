@@ -12,7 +12,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'A Muvaz', href: '#sobre' },
+    { name: 'Sobre Nós', href: '#sobre' },
     { name: 'Diferenciais', href: '#diferenciais' },
     { name: 'Ambientes', href: '#ambientes' },
     { name: 'Processo', href: '#processo' },
@@ -21,10 +21,10 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-luxury-offwhite/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-8'}`}>
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="container mx-auto mb-2 px-6 md:px-8 flex justify-between items-center">
         <div className="flex items-center">
           <span className={`text-2xl font-serif tracking-tighter transition-colors duration-500 ${isScrolled ? 'text-luxury-graphite' : 'text-white'}`}>
-            MUVAZ
+            Bolivar Marcenaria
           </span>
         </div>
 
