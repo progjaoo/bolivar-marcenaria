@@ -1,4 +1,3 @@
-import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { WHATSAPP_URL } from '../utils/constants';
 import { FaWhatsapp } from 'react-icons/fa';
