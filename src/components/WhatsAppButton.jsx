@@ -1,6 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { WHATSAPP_URL } from '../utils/constants';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
   return (
@@ -19,7 +20,7 @@ const WhatsAppButton = () => {
       <div className="absolute right-full mr-4 bg-white text-luxury-graphite px-4 py-2 rounded-lg text-sm font-medium shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden md:block">
         Falar com Consultor
       </div>
-      <MessageCircle className="w-8 h-8" />
+      <FaWhatsapp className="w-8 h-8" />
     </motion.a>
   );
 };
