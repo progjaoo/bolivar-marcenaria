@@ -46,6 +46,7 @@ function App() {
         >
           <Features />
         </motion.div>
+        
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
