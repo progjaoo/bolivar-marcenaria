@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 text-luxury-offwhite/90"
         >
-          A união perfeita entre a maestria artesanal e a inovação industrial, para criar ambientes exclusivos que traduzem sua identidade.
+          A fusão perfeita entre a maestria artesanal e a inovação industrial milimétrica para ambientes que traduzem sua identidade.
         </motion.p>
 
         <motion.div
@@ -49,7 +49,8 @@ const Hero = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-luxury-gold hover:bg-luxury-gold/90 text-white px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300">
+            className="inline-block bg-luxury-gold hover:bg-luxury-gold/90 text-white px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300"
+          >
             Agendar Reunião com Consultor
           </a>
         </motion.div>
