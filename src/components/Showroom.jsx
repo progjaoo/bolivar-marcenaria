@@ -3,46 +3,54 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Maximize2, ChevronLeft, ChevronRight } from 'lucide-react';
 
+import cozinha1 from '../assets/cozinha/cozinha1.jpeg';
+import cozinha2 from '../assets/cozinha/cozinha2.jpeg';
+import cozinha3 from '../assets/cozinha/cozinha3.jpeg';
+import cozinha4 from '../assets/cozinha/cozinha4.jpeg';
+import cozinha5 from '../assets/cozinha/cozinha5.jpeg';
+import cozinha6 from '../assets/cozinha/cozinha6.jpeg';
+import closet1 from '../assets/closet/closet1.jpeg';
+import closet2 from '../assets/closet/closet2.jpeg';
+import closet3 from '../assets/closet/closet3.jpeg';
+import closet4 from '../assets/closet/closet4.jpeg';
+import closet5 from '../assets/closet/closet5.jpeg';
+import closet6 from '../assets/closet/closet6.jpeg';
+import sala1 from '../assets/sala/sala1.jpeg';
+import sala2 from '../assets/sala/sala2.jpeg';
+import sala3 from '../assets/sala/sala3.jpeg';
+import sala4 from '../assets/sala/sala4.jpeg';
+import sala5 from '../assets/sala/sala5.jpeg';
+import sala6 from '../assets/sala/sala6.jpeg';
+import escritorio1 from '../assets/escritorio/escritorio1.jpeg';
+import escritorio2 from '../assets/escritorio/escritorio2.jpeg';
+import escritorio3 from '../assets/escritorio/escritorio3.jpeg';
+import escritorio4 from '../assets/escritorio/escritorio4.jpeg';
+import escritorio5 from '../assets/escritorio/escritorio5.jpeg';
+import escritorio6 from '../assets/escritorio/escritorio6.jpeg';
+import consultorio1 from '../assets/consultorio/consultorio1.jpeg';
+import consultorio2 from '../assets/consultorio/consultorio2.jpeg';
+import consultorio3 from '../assets/consultorio/consultorio3.jpeg';
+import consultorio4 from '../assets/consultorio/consultorio4.jpeg';
+import consultorio5 from '../assets/consultorio/consultorio5.jpeg';
+import consultorio6 from '../assets/consultorio/consultorio6.jpeg';
+
+
 const categoryData = {
   Cozinha: [
-    "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1556909212-d5b604ad9290?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1556912177-c54030639a60?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1565182999561-18d7dc63c391?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&q=80&w=800"
+    cozinha1,cozinha2,cozinha3,cozinha4,cozinha5,cozinha6
   ],
   Closet: [
-    "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=800"
+    closet1,closet2,closet3,closet4,closet5,closet6
   ],
   Sala: [
-    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1616489953149-755174092144?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1615529328331-f8917597711f?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1617806118233-f8e187c44b5c?auto=format&fit=crop&q=80&w=800"
+    sala1,sala2,sala3,sala4,sala5,sala6
   ],
   Escritório: [
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80&w=800"
+    escritorio1,escritorio2,escritorio3,escritorio4,escritorio5,escritorio6
   ],
-  "Área Gourmet": [
-    "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1596522354195-e84ae3c98731?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1588854333355-112aaecf4a58?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&q=80&w=800"
+  "Consultórios": [
+    consultorio1,consultorio2,consultorio3,consultorio4,consultorio5,consultorio6
+
   ]
 };
 
@@ -69,7 +77,6 @@ const Showroom = () => {
   return (
     <section id="ambientes" className="py-24 md:py-32 bg-luxury-offwhite">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -85,13 +92,10 @@ const Showroom = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-luxury-graphite/70 font-light text-lg md:text-xl leading-relaxed"
-          >
+            className="text-luxury-graphite/70 font-light text-lg md:text-xl leading-relaxed">
             Ambientes que mostram a essência do design autoral. Cada espaço é pensado para refletir seu estilo e transmitir exclusividade.
           </motion.p>
         </div>
-
-        {/* Categories Filter */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-16 border-b border-luxury-gray-light pb-8">
           {categories.map((category) => (
             <button
@@ -196,8 +200,6 @@ const Showroom = () => {
           </div>
         </div>
       </div>
-
-      {/* Lightbox Modal */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -205,12 +207,10 @@ const Showroom = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
-            onClick={() => setSelectedImage(null)}
-          >
+            onClick={() => setSelectedImage(null)} >
             <button
               className="absolute top-6 right-6 text-white hover:text-luxury-gold transition-colors z-50"
-              onClick={() => setSelectedImage(null)}
-            >
+              onClick={() => setSelectedImage(null)} >
               <X size={32} />
             </button>
             <motion.img
