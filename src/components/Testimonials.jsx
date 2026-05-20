@@ -5,12 +5,12 @@ import { Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      text: "A precisão da Muvaz é incomparável. Como arquiteto, prezo pelo detalhe técnico e pela fidelidade ao projeto original. Eles entregam exatamente o que foi concebido, com um acabamento que impressiona os clientes mais exigentes.",
+      text: "A precisão da Bolivar Marcenaria é incomparável. Como arquiteto, prezo pelo detalhe técnico e pela fidelidade ao projeto original. Eles entregam exatamente o que foi concebido, com um acabamento que impressiona os clientes mais exigentes.",
       author: "Rodrigo Almeida",
       role: "Arquiteto de Interiores"
     },
     {
-      text: "Minha experiência com a Muvaz foi impecável do briefing à montagem. O profissionalismo da equipe e o respeito pelos prazos são raros no mercado de alto padrão. Recomendo sem hesitação.",
+      text: "Minha experiência com a Bolivar Marcenaria foi impecável do briefing à montagem. O profissionalismo da equipe e o respeito pelos prazos são raros no mercado de alto padrão. Recomendo sem hesitação.",
       author: "Beatriz Vasconcelos",
       role: "Designer de Interiores"
     },

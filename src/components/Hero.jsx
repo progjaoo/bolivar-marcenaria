@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 text-luxury-offwhite/90"
         >
-          A fusão perfeita entre a maestria artesanal e a inovação industrial milimétrica para ambientes que traduzem sua identidade.
+          A união perfeita entre a maestria artesanal e a inovação industrial, para criar ambientes exclusivos que traduzem sua identidade.
         </motion.p>
 
         <motion.div
