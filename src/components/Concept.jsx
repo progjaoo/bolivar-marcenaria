@@ -34,7 +34,7 @@ const Concept = () => {
             className="space-y-6"
           >
             <p className="text-lg md:text-xl text-luxury-graphite/70 font-light leading-relaxed">
-              Na Muvaz, não apenas produzimos mobiliário; nós engenheiramos experiências de vida. Cada projeto é uma tela em branco onde a funcionalidade rigorosa e a estética sublime coexistem em perfeito equilíbrio.
+              Na Bolivar Marcenaria, não apenas produzimos mobiliário; nós engenheiramos experiências de vida. Cada projeto é uma tela em branco onde a funcionalidade rigorosa e a estética sublime coexistem em perfeito equilíbrio.
             </p>
             <p className="text-lg md:text-xl text-luxury-graphite/70 font-light leading-relaxed">
               Através de processos de fabricação de ponta e uma curadoria obsessiva de materiais, elevamos a marcenaria ao status de design autoral, garantindo que cada detalhe reflita a singularidade de quem habita o espaço.

@@ -2,6 +2,12 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Maximize2 } from 'lucide-react';
+/* import cozinha1 from '../assets/cozinha/cozinha1.jpg';
+import cozinha2 from '../assets/cozinha/cozinha2.jpg';
+import cozinha3 from '../assets/cozinha/cozinha3.jpg';
+import cozinha4 from '../assets/cozinha/cozinha4.jpg';
+import cozinha5 from '../assets/cozinha/cozinha5.jpg';
+import cozinha6 from '../assets/cozinha/cozinha6.jpg'; */
 
 const categoryData = {
   Cozinha: [
