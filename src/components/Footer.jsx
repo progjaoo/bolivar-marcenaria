@@ -39,8 +39,9 @@ const Footer = () => {
                   <Phone className="w-4 h-4 text-luxury-gold" />
                   +55 (24) 9 8147-0662
                 </a></li>
-              <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-luxury-gold" /> contato@muvaz.com.br</li>
-              <li>
+{/*               <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-luxury-gold" /> contato@muvaz.com.br</li>
+ */}              
+                  <li>
                     <a
                       href="https://share.google/kFyBhDSXw9N3NhB94"
                       target="_blank"
