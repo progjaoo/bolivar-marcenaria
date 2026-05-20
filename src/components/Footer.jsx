@@ -22,19 +22,40 @@ const Footer = () => {
               <li><a href="#diferenciais" className="hover:text-white transition-colors">Diferenciais</a></li>
               <li><a href="#ambientes" className="hover:text-white transition-colors">Ambientes</a></li>
               <li><a href="#processo" className="hover:text-white transition-colors">Processo</a></li>
-              <li><a href="#ambientes" className="hover:text-white transition-colors">Portfólio</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm tracking-[0.2em] uppercase font-serif mb-8 text-luxury-gold">Contato</h4>
             <ul className="space-y-4 font-light text-white/60">
-              <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-luxury-gold" /> +55 (24) 98147-0662</li>
-              <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-luxury-gold" /> contato@muvaz.com.br</li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-luxury-gold mt-1" />
-                <span>Rua: Major José Bento, 235 Vila Nova, Barra Mansa<br />Rio de Janeiro - RJ</span>
+              <li>
+                <a
+                  href="https://wa.me/5524981470662"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 hover:text-white transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-luxury-gold" />
+                  +55 (24) 9 8147-0662
+                </a>
               </li>
+{/*               <li className="flex items-center gap-3"><Mail href="mailto:contato@bolivarmarcenaria.com.br" className="w-4 h-4 text-luxury-gold" /> contato@bolivarmarcenaria.com.br</li>
+ */}              <li>
+                    <a
+                      href="https://share.google/kFyBhDSXw9N3NhB94"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-3 hover:text-white transition-colors"
+                    >
+                      <MapPin className="w-4 h-4 text-luxury-gold mt-1" />
+
+                      <span>
+                        Rua: Major José Bento, 235 Vila Nova, Barra Mansa
+                        <br />
+                        Rio de Janeiro - RJ
+                      </span>
+                    </a>
+                  </li>
             </ul>
           </div>
 
