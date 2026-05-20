@@ -1,7 +1,7 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Maximize2 } from 'lucide-react';
+import { X, Maximize2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 import cozinha1 from '../assets/cozinha/cozinha1.jpeg';
 import cozinha2 from '../assets/cozinha/cozinha2.jpeg';
@@ -59,6 +59,20 @@ const categories = Object.keys(categoryData);
 const Showroom = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Reset index when category changes
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [activeCategory]);
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % categoryData[activeCategory].length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + categoryData[activeCategory].length) % categoryData[activeCategory].length);
+  };
 
   return (
     <section id="ambientes" className="py-24 md:py-32 bg-luxury-offwhite">
@@ -104,42 +118,86 @@ const Showroom = () => {
           ))}
         </div>
 
-        {/* Image Grid / Carousel */}
-        <div className="relative group/carousel">
-          {/* Mobile Fades */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-luxury-offwhite to-transparent z-10 pointer-events-none md:hidden" />
-          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-luxury-offwhite to-transparent z-10 pointer-events-none md:hidden" />
+        {/* Desktop & Tablet Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AnimatePresence mode="popLayout">
+            {categoryData[activeCategory].map((image, index) => (
+              <motion.div
+                key={image}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="group relative aspect-square overflow-hidden rounded-2xl bg-luxury-gray-light shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
+                <img
+                  src={image}
+                  alt={`${activeCategory} ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500 flex items-center justify-center">
+                  <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 w-8 h-8" />
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
 
-          <motion.div
-            layout
-            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide pb-4 md:pb-0 px-4 md:px-0"
-          >
-            <AnimatePresence mode="popLayout">
-              {categoryData[activeCategory].map((image, index) => (
-                <motion.div
-                  key={image}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
-                  className="group relative aspect-square md:aspect-square min-w-[85vw] md:min-w-0 flex-shrink-0 snap-center overflow-hidden rounded-2xl bg-luxury-gray-light shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
-                  onClick={() => setSelectedImage(image)}
-                >
-                  <img
-                    src={image}
-                    alt={`${activeCategory} ${index + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500 flex items-center justify-center">
-                    <Maximize2 className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 w-8 h-8" />
-                  </div>
-                </motion.div>
-              ))}
+        {/* Mobile Slider */}
+        <div className="md:hidden relative px-4">
+          <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg bg-luxury-gray-light">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${activeCategory}-${currentIndex}`}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="w-full h-full cursor-pointer"
+                onClick={() => setSelectedImage(categoryData[activeCategory][currentIndex])}
+              >
+                <img
+                  src={categoryData[activeCategory][currentIndex]}
+                  alt={`${activeCategory} ${currentIndex + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-4 right-4 bg-black/20 backdrop-blur-md p-2 rounded-full">
+                  <Maximize2 className="text-white w-5 h-5" />
+                </div>
+              </motion.div>
             </AnimatePresence>
-          </motion.div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:scale-90 transition-transform"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:scale-90 transition-transform"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {categoryData[activeCategory].map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  currentIndex === idx ? 'w-8 bg-luxury-gold' : 'w-2 bg-luxury-gray-light'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <AnimatePresence>
