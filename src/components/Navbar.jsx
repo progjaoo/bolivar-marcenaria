@@ -47,7 +47,7 @@ const Navbar = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.5,  
         ease: [0.22, 1, 0.36, 1]
       }
     }
@@ -161,7 +161,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="block w-full text-center px-6 py-4 bg-luxury-graphite text-white text-xs tracking-[0.2em] uppercase hover:bg-luxury-gold transition-colors"
                   >
-                    Solicitar Projeto Exclusivo
+                    Solicitar Projeto
                   </a>
                 </motion.div>
               </div>
@@ -169,8 +169,8 @@ const Navbar = () => {
               <div className="mt-auto pt-12 border-t border-luxury-gray-light">
                 <p className="text-xs uppercase tracking-widest text-luxury-graphite/40 mb-4">Redes Sociais</p>
                 <div className="flex space-x-6 text-luxury-graphite">
-                  <a href="#" className="hover:text-luxury-gold transition-colors">Instagram</a>
-                  <a href="#" className="hover:text-luxury-gold transition-colors">Facebook</a>
+                  <a href="https://www.instagram.com/bolivarmarcenaria/" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">Instagram</a>
+                  <a href="https://www.facebook.com/BoliarMarcenaria/mentions/" target='_blank' rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">Facebook</a>
                 </div>
               </div>
             </motion.div>
