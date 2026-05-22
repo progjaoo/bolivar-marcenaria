@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center md:bg-center max-md:bg-[position:center_25%]"
         style={{
           backgroundImage: 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
         }}
@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 text-luxury-offwhite/90"
         >
-          A fusão perfeita entre a maestria artesanal e a inovação industrial milimétrica para ambientes que traduzem sua identidade.
+          A união perfeita entre a maestria artesanal e a inovação industrial, para criar ambientes exclusivos que traduzem sua identidade.
         </motion.p>
 
         <motion.div
