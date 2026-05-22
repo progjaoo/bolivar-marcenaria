@@ -6,11 +6,10 @@ const Hero = () => {
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center md:bg-center max-md:bg-[position:center_calc(20%_+_28px)] transition-transform duration-700 hover:scale-105"
         style={{
           backgroundImage: 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
-        }}
-      />
+        }} />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center text-white">
         <motion.span
