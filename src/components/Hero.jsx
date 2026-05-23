@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { WHATSAPP_URL } from '../utils/constants';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[970px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat md:bg-center max-md:bg-[position:center_20%] transition-transform duration-700 hover:scale-105"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat md:bg-center max-md:bg-[length:auto_112%] max-md:bg-[position:center_calc(20%_+_22px)]"
         style={{
           backgroundImage: 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
         }} />
@@ -29,11 +30,11 @@ const Hero = () => {
         >
           <span className="md:hidden">
             Onde a<br />
-            precisão técnica<br />
-            encontra a arte autoral.
+            <span className="whitespace-nowrap">precisão técnica</span><br />
+            encontra a arte autoral
           </span>
           <span className="hidden md:inline">
-            Onde a precisão técnica encontra a arte autoral.
+            Onde a precisão técnica encontra a arte autoral
           </span>
         </motion.h1>
 
@@ -43,7 +44,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 text-luxury-offwhite/90"
         >
-          A união perfeita entre a maestria artesanal e a inovação industrial, para criar ambientes exclusivos que traduzem sua identidade.
+          A união perfeita entre a maestria artesanal e a inovação industrial, para criar ambientes exclusivos que traduzem sua identidade
         </motion.p>
 
         <motion.div
@@ -55,9 +56,10 @@ const Hero = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-luxury-gold hover:bg-luxury-gold/90 text-white px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300"
+            className="inline-flex items-center justify-center gap-3 bg-[#35A15D] hover:bg-[#2a8a4c] text-white px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300"
           >
-            Agendar Reunião com Consultor
+            <FaWhatsapp className="h-5 w-5 flex-shrink-0" />
+            Comece seu projeto agora
           </a>
         </motion.div>
       </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { WHATSAPP_URL } from '../utils/constants';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -158,9 +159,9 @@ const Navbar = () => {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-10 py-5 bg-luxury-graphite text-white text-[10px] tracking-[0.3em] uppercase hover:bg-luxury-gold transition-colors"
+                  className="inline-block px-10 py-5 bg-[#35A15D] hover:bg-[#2a8a4c] text-white text-[10px] tracking-[0.3em] uppercase hover:bg-luxury-gold transition-colors"
                 >
-                  Solicitar Projeto Exclusivo
+                  Comece seu projeto agora
                 </a>
               </motion.div>
             </div>
@@ -171,8 +172,8 @@ const Navbar = () => {
             >
               <p className="text-[10px] uppercase tracking-[0.4em] text-luxury-graphite/40 mb-6">Redes Sociais</p>
               <div className="flex space-x-8 text-luxury-graphite text-sm tracking-widest">
-                <a href="#" className="hover:text-luxury-gold transition-colors">Instagram</a>
-                <a href="#" className="hover:text-luxury-gold transition-colors">Facebook</a>
+                <a href="https://www.instagram.com/bolivarmarcenaria/" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">Instagram</a>
+                <a href="https://www.facebook.com/bolivarmarcenaria/" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">Facebook</a>
               </div>
             </motion.div>
           </motion.div>
