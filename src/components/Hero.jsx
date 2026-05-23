@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center md:bg-center max-md:bg-[position:center_calc(20%_+_28px)] transition-transform duration-700 hover:scale-105"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat md:bg-center max-md:bg-[position:center_20%] transition-transform duration-700 hover:scale-105"
         style={{
           backgroundImage: 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
         }} />
@@ -27,7 +27,14 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.4 }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif mb-8 leading-[1.1] max-w-5xl mx-auto"
         >
-          Onde a precisão técnica encontra a arte.
+          <span className="md:hidden">
+            Onde a<br />
+            precisão técnica<br />
+            encontra a arte autoral.
+          </span>
+          <span className="hidden md:inline">
+            Onde a precisão técnica encontra a arte autoral.
+          </span>
         </motion.h1>
 
         <motion.p

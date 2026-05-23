@@ -51,7 +51,9 @@ const categoryData = {
   "Consultórios": [
     consultorio1,consultorio2,consultorio3,consultorio4,consultorio5,consultorio6
 
-  ]
+  ],
+  "Loja": [],
+  "Quartos":[]
 };
 
 const categories = Object.keys(categoryData);
