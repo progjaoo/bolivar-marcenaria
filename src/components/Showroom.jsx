@@ -33,7 +33,18 @@ import consultorio3 from '../assets/consultorio/consultorio3.jpeg';
 import consultorio4 from '../assets/consultorio/consultorio4.jpeg';
 import consultorio5 from '../assets/consultorio/consultorio5.jpeg';
 import consultorio6 from '../assets/consultorio/consultorio6.jpeg';
-
+import loja1 from '../assets/loja/loja1.jpeg';
+import loja2 from '../assets/loja/loja2.jpeg';
+import loja3 from '../assets/loja/loja3.jpeg';
+import loja4 from '../assets/loja/loja4.jpeg';
+import loja5 from '../assets/loja/loja5.jpeg';
+import loja6 from '../assets/loja/loja6.jpeg';
+import quarto1 from '../assets/quarto/quarto1.jpeg';
+import quarto2 from '../assets/quarto/quarto2.jpeg';
+import quarto3 from '../assets/quarto/quarto3.jpeg';
+import quarto4 from '../assets/quarto/quarto4.jpeg';
+import quarto5 from '../assets/quarto/quarto5.jpeg';
+import quarto6 from '../assets/quarto/quarto6.jpeg';
 
 const categoryData = {
   Cozinha: [
@@ -52,8 +63,8 @@ const categoryData = {
     consultorio1,consultorio2,consultorio3,consultorio4,consultorio5,consultorio6
 
   ],
-  "Loja": [],
-  "Quartos":[]
+  "Loja": [loja1,loja2,loja3,loja4,loja5, loja6],
+  "Quartos":[quarto1,quarto2,quarto3,quarto4,quarto5,quarto6]
 };
 
 const categories = Object.keys(categoryData);
