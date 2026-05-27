@@ -5,19 +5,19 @@ import { Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      text: "A precisão da Bolivar Marcenaria é incomparável. Como arquiteto, prezo pelo detalhe técnico e pela fidelidade ao projeto original. Eles entregam exatamente o que foi concebido, com um acabamento que impressiona os clientes mais exigentes.",
-      author: "Rodrigo Almeida",
-      role: "Arquiteto de Interiores"
+      text: "Excelente trabalho! Profissionais de qualidade, entregue dentro do prazo e atendimento de excelência. Muito satisfeita! 😀",
+      author: "Legalize Despachante ⭐⭐⭐⭐⭐",
+      role: "Empresa"
     },
     {
-      text: "Minha experiência com a Bolivar Marcenaria foi impecável do briefing à montagem. O profissionalismo da equipe e o respeito pelos prazos são raros no mercado de alto padrão. Recomendo sem hesitação.",
-      author: "Beatriz Vasconcelos",
-      role: "Designer de Interiores"
+      text: "Excelente profissionais, trabalho de qualidade, entrega dentro do prazo, muito atenciosos e mantém grande respeito com os clientes! meus pedidos ficaram perfeitos sem nenhum erro; Super, super recomendo!!! 👏👏👏",
+      author: "Cristina Henrique dos Santos ⭐⭐⭐⭐⭐",
+      role: "Cliente"
     },
     {
-      text: "Transformaram nosso novo showroom em uma vitrine de sofisticação. A integração entre a madeira nobre e os elementos tecnológicos de abertura é simplesmente perfeita.",
-      author: "Henrique Fontes",
-      role: "CEO, Grupo HF"
+      text: "Atendimento ótimo, todos os móveis feitos dentro do prazo, material de excelente qualidade, tudo conforme combinado! Todos os funcionários muito atenciosos, todas as solicitações atendidas! Muito difícil hoje em dia conseguir um serviço de tanta qualidade, não tenho nenhuma reclamação a fazer, tudo perfeito , fiquei muito satisfeita! Recomendo!",
+      author: "Luciana Torturello ⭐⭐⭐⭐⭐",
+      role: "Cliente"
     }
   ];
 
