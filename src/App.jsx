@@ -13,7 +13,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
-    <div className="min-h-screen bg-luxury-offwhite overflow-x-hidden">
+    <div className="min-h-screen bg-luxury-offwhite overflow-x-hidden pb-24 md:pb-0">
       <Navbar />
 
       <main>

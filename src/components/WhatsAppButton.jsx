@@ -8,14 +8,14 @@ const WhatsAppButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const conceptSection = document.getElementById('sobre');
+      const heroSection = document.querySelector('main > section:first-child');
 
-      if (!conceptSection) {
+      if (!heroSection) {
         setIsVisible(false);
         return;
       }
 
-      setIsVisible(conceptSection.getBoundingClientRect().top <= window.innerHeight * 0.85);
+      setIsVisible(heroSection.getBoundingClientRect().bottom <= 0);
     };
 
     handleScroll();
@@ -33,12 +33,11 @@ const WhatsAppButton = () => {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 24 }}
+      whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.5 }}
-      className={`fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center group [.mobile-menu-open_&]:!opacity-0 [.mobile-menu-open_&]:!pointer-events-none transition-opacity duration-300 ${isVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
+      className={`fixed inset-x-0 bottom-0 z-[60] bg-white px-4 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(18,18,18,0.1)] flex items-center justify-center group md:inset-x-auto md:right-8 md:bottom-8 md:bg-[#35A15D] md:p-4 md:rounded-full md:shadow-2xl [.mobile-menu-open_&]:!opacity-0 [.mobile-menu-open_&]:!pointer-events-none transition-opacity duration-300 ${isVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
       aria-label="Falar no WhatsApp"
       aria-hidden={!isVisible}
       tabIndex={isVisible ? 0 : -1}
@@ -46,7 +45,12 @@ const WhatsAppButton = () => {
       <div className="absolute right-full mr-4 bg-white text-luxury-graphite px-4 py-2 rounded-lg text-sm font-medium shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden md:block">
         Falar com Consultor
       </div>
-      <FaWhatsapp className="w-8 h-8" />
+      <div className="flex min-h-[68px] w-full items-center justify-start gap-3 bg-[#35A15D] px-5 py-3 text-white shadow-lg md:contents md:min-h-0 md:w-auto md:bg-transparent md:p-0 md:shadow-none">
+        <FaWhatsapp className="h-6 w-6 flex-shrink-0 md:h-8 md:w-8" />
+        <span className="text-[12px] tracking-[0.22em] uppercase leading-[1.55] md:hidden">
+          Falar com especialista
+        </span>
+      </div>
     </motion.a>
   );
 };
