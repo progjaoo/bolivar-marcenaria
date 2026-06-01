@@ -45,7 +45,7 @@ const WhatsAppButton = () => {
       <div className="absolute right-full mr-4 bg-white text-luxury-graphite px-4 py-2 rounded-lg text-sm font-medium shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden md:block">
         Falar com Consultor
       </div>
-      <div className="flex min-h-[68px] w-full items-center justify-start gap-3 bg-[#35A15D] px-5 py-3 text-white shadow-lg md:contents md:min-h-0 md:w-auto md:bg-transparent md:p-0 md:shadow-none">
+      <div className="flex min-h-[68px] w-full items-center justify-center gap-3 bg-[#35A15D] px-5 py-3 text-white shadow-lg md:contents md:min-h-0 md:w-auto md:bg-transparent md:p-0 md:shadow-none">
         <FaWhatsapp className="h-6 w-6 flex-shrink-0 md:h-8 md:w-8" />
         <span className="text-[12px] tracking-[0.22em] uppercase leading-[1.55] md:hidden">
           Falar com especialista
