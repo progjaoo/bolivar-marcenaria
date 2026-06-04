@@ -5,24 +5,82 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqData = [
   {
-    question: "Atendem minha região?",
-    answer: "Sim, atendemos todo o Sul Fluminense."
-  },
-  {
-    question: "Fazem visita?",
-    answer: "Sim, atendemos a domicílio."
-  },
-  {
     question: "Qual o prazo de entrega?",
-    answer: "Entregamos em até 2 meses."
+    answer: (
+      <div className="space-y-4">
+        <p className="font-bold">Varia conforme a complexidade:</p>
+        <ul className="space-y-2 ml-4">
+          <li>
+            <span className="font-bold">Projetos pequenos: 30-45 dias úteis</span> (painel, gaveteiro, armário)
+          </li>
+          <li>
+            <span className="font-bold">Projetos comerciais: 30-45 dias úteis</span> (ambientes corporativos)
+          </li>
+          <li>
+            <span className="font-bold">Projetos médios/grandes : 60 dias úteis</span> (cozinha, closet, sala)
+          </li>
+        </ul>
+        <p className="pt-2">
+          Preferimos cumprir prazo com qualidade do que prometer 15 dias e atrasar 6 meses.
+          Você recebe o prazo exato na <span className="underline font-bold decoration-luxury-gold/40 underline-offset-4">consultoria.</span>
+        </p>
+      </div>
+    )
   },
   {
-    question: "Fazem projeto personalizado?",
-    answer: "Sim, desenvolvemos projetos de acordo com o gosto e necessidade do cliente."
+    question: "Atendem minha região?",
+    answer: (
+      <div className="space-y-6">
+        <p className="font-bold">Sim! Atendemos em duas regiões principais:</p>
+
+        <div className="space-y-2">
+          <p className="font-bold text-luxury-graphite">Sul-Fluminense:</p>
+          <p className="ml-4 font-bold">Volta Redonda, Barra Mansa, Resende, Porto Real, Pinheiral e região.</p>
+        </div>
+
+        <div className="space-y-2">
+          <p className="font-bold text-luxury-graphite">Rio de Janeiro:</p>
+          <p className="ml-4 font-bold">Barra da Tijuca, Aterro do Flamengo e outras regiões do Rio.</p>
+        </div>
+
+        <p className="ml-8">
+          Maioria dos clientes são de Barra Mansa e Volta Redonda, mas estamos expandindo para o Rio.
+          Se estiver em outro lugar, consulte nosso <span className="font-bold underline decoration-luxury-gold underline-offset-4">especialista.</span>
+        </p>
+      </div>
+    )
+  },
+  {
+    question: "Fazem visita e projeto personalizado?",
+    answer: "Sim! Atendemos a domicílio e desenvolvemos projetos exclusivos de acordo com o gosto e necessidade de cada cliente, garantindo que cada centímetro seja bem aproveitado."
   },
   {
     question: "Trabalham com apartamentos pequenos?",
-    answer: "Sim, atendemos todos os tipos de ambientes e tamanhos."
+    answer: "Sim, somos especialistas em otimização de espaços. Atendemos todos os tipos de ambientes, desde studios e apartamentos compactos até grandes residências e áreas comerciais."
+  },
+  {
+    question: "Qual o investimento aproximado?",
+    answer: (
+      <div className="space-y-6">
+        <p className="font-bold">
+          Varia bastante: R$5.000 a R$50.000+ (depende tamanho, complexidade, materiais, design).
+        </p>
+
+        <div className="space-y-2">
+          <p className="font-bold">Exemplos:</p>
+          <ul className="space-y-1 ml-4">
+            <li className="font-bold">- Armário personalizado: R$5-8k aproximadamente</li>
+            <li className="font-bold">- Closet: R$15-25k aproximadamente</li>
+            <li className="font-bold">- Cozinha completa: R$15-50k aproximadamente</li>
+            <li className="font-bold">- Múltiplos ambientes: R$50k+</li>
+          </ul>
+        </div>
+
+        <p className="font-bold">
+          Orçamento sem surpresa. O que a gente passa é o que você <span className="underline decoration-luxury-gold underline-offset-4">paga.</span>
+        </p>
+      </div>
+    )
   }
 ];
 
@@ -54,9 +112,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-luxury-graphite/70 leading-relaxed max-w-3xl">
+            <div className="pb-6 text-luxury-graphite/70 leading-relaxed max-w-3xl">
               {answer}
-            </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
