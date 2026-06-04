@@ -19,7 +19,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="block text-xs md:text-sm tracking-[0.4em] uppercase mb-6"
         >
-          Design Autoral & Marcenaria de Luxo
+          Marcenaria Personalizada
         </motion.span>
 
         <motion.h1

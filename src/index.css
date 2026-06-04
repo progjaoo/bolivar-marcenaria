@@ -27,7 +27,9 @@
     @apply font-serif;
   }
 }
-
+.answer {
+    white-space: pre-line;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -94,7 +94,7 @@ const Navbar = () => {
               href={link.href}
               className={`text-sm tracking-[0.15em] uppercase transition-colors duration-500 hover:text-luxury-gold ${isScrolled ? 'text-luxury-graphite' : 'text-white'}`}
             >
-              {link.name}
+              {link.name} 
             </a>
           ))}
           <a

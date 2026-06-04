@@ -5,24 +5,48 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqData = [
   {
-    question: "Atendem minha região?",
-    answer: "Sim, atendemos todo o Sul Fluminense."
+    question: "QUAL É O PRAZO DE ENTREGA?",
+    answer: `Varia conforme a complexidade:
+
+Projetos pequenos: 30-45 dias úteis (painel, gaveteiro, armário)
+Projetos comerciais: 30-45 dias úteis (ambientes corporativos)
+Projetos médios/grandes : 60 dias úteis (cozinha, closet, sala)
+
+Preferimos cumprir prazo com qualidade do que prometer 15 dias e atrasar 6 meses. Você recebe o prazo exato na consultoria.`
   },
   {
-    question: "Fazem visita?",
-    answer: "Sim, atendemos a domicílio."
+    question: "ATENDEM NA MINHA REGIÃO?",
+    answer: `Sim! Atendemos em duas regiões principais:
+
+Sul-Fluminense:
+Volta Redonda, Barra Mansa, Resende, Porto Real, Pinheiral e região.
+
+Rio de Janeiro:
+Barra da Tijuca, Aterro do Flamengo e outras regiões do Rio.
+
+Maioria dos clientes é de Barra Mansa e Volta Redonda, mas estamos expandindo para o Rio. Se estiver em outro lugar, consulte nosso especialista.`
   },
   {
-    question: "Qual o prazo de entrega?",
-    answer: "Entregamos em até 2 meses."
+    question: "FAZEM PROJETO PERSONALIZADO?",
+    answer: `100%. Cada projeto é único, feito especificamente para você e seu espaço.
+Não temos catálogo. Entendemos você, entendemos o espaço, criamos algo que reflete sua identidade e dura décadas.`
   },
   {
-    question: "Fazem projeto personalizado?",
-    answer: "Sim, desenvolvemos projetos de acordo com o gosto e necessidade do cliente."
+    question: "TRABALHAM COM APARTAMENTOS PEQUENOS?",
+    answer: `Sim. Na verdade é especialidade nossa.
+Quanto menor o espaço, mais inteligente o design. Otimizamos cada centímetro com móveis multifuncionais, verticalizando, desembaraçando. Espaço pequeno não é problema.`
   },
   {
-    question: "Trabalham com apartamentos pequenos?",
-    answer: "Sim, atendemos todos os tipos de ambientes e tamanhos."
+    question: "QUAL É O INVESTIMENTO APROXIMADO?",
+    answer: `Varia bastante: R$5.000 a R$50.000+ (depende tamanho, complexidade, materiais, design).
+
+Exemplos:
+- Armário personalizado: R$5-8k aproximadamente
+- Closet: R$15-25k aproximadamente
+- Cozinha completa: R$15-50k aproximadamente
+- Múltiplos ambientes: R$50k+
+
+Orçamento sem surpresa. O que a gente passa é o que você paga.`
   }
 ];
 
