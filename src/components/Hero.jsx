@@ -77,7 +77,7 @@ const Hero = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-luxury-green hover:bg-luxury-green/80 text-luxury-graphite font-bold px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-xl"
+            className="inline-flex items-center justify-center gap-3 bg-luxury-green hover:bg-luxury-green/80 text-luxury-white font-bold px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-xl"
           >
             <FaWhatsapp className="h-5 w-5 flex-shrink-0" />
             Comece seu projeto agora
