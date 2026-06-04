@@ -26,7 +26,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="block text-xs md:text-sm tracking-[0.4em] uppercase mb-6 font-medium text-luxury-gold"
+          className="block text-xs md:text-sm tracking-[0.4em] uppercase mb-6 font-semibold text-luxury-gold"
         >
           Marcenaria Personalizada
         </motion.span>
@@ -55,10 +55,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-12"
         >
-          <p className="text-sm md:text-base tracking-widest uppercase mb-6 text-luxury-gold/80">
+          <p className="text-sm md:text-base tracking-widest uppercase mb-6 font-semibold text-luxury-gold/100">
             Atendemos em toda a região Sul Fluminense e Rio de Janeiro:
           </p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base font-light text-white/80">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg md:text-base font-bold text-white/120">
             {locations.map((loc, index) => (
               <span key={index} className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-luxury-gold rounded-full" />
@@ -77,7 +77,7 @@ const Hero = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-luxury-gold hover:bg-luxury-gold/80 text-luxury-graphite font-bold px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-xl"
+            className="inline-flex items-center justify-center gap-3 bg-luxury-green hover:bg-luxury-green/80 text-luxury-graphite font-bold px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-xl"
           >
             <FaWhatsapp className="h-5 w-5 flex-shrink-0" />
             Comece seu projeto agora

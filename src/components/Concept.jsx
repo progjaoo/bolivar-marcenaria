@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import fotoFamilia from '../assets/familiabolivar4k.png';
 
 const Concept = () => {
   return (
@@ -16,13 +17,10 @@ const Concept = () => {
           >
             <div className="relative">
               <img
-                src="/assets/familiabolivar.jpeg"
+                src={fotoFamilia}
                 alt="Família Bolivar"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-                onError={(e) => {
-                  e.target.src = "https://images.unsplash.com/photo-1581578731522-421712a4505f?q=80&w=1000&auto=format&fit=crop";
-                  console.log("Image not found, using fallback");
-                }}
+              
               />
               {/* Decorative gold border */}
               <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-luxury-gold/30 rounded-2xl -z-10 hidden md:block" />
