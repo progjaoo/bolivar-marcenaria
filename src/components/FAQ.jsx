@@ -5,26 +5,50 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqData = [
   {
-    question: "QUAL É O PRAZO DE ENTREGA?",
-    answer: `Varia conforme a complexidade:
-
-Projetos pequenos: 30-45 dias úteis (painel, gaveteiro, armário)
-Projetos comerciais: 30-45 dias úteis (ambientes corporativos)
-Projetos médios/grandes : 60 dias úteis (cozinha, closet, sala)
-
-Preferimos cumprir prazo com qualidade do que prometer 15 dias e atrasar 6 meses. Você recebe o prazo exato na consultoria.`
+    question: "Qual o prazo de entrega?",
+    answer: (
+      <div className="space-y-4">
+        <p className="font-bold">Varia conforme a complexidade:</p>
+        <ul className="space-y-2 ml-4">
+          <li>
+            <span className="font-bold">Projetos pequenos: 30-45 dias úteis</span> (painel, gaveteiro, armário)
+          </li>
+          <li>
+            <span className="font-bold">Projetos comerciais: 30-45 dias úteis</span> (ambientes corporativos)
+          </li>
+          <li>
+            <span className="font-bold">Projetos médios/grandes : 60 dias úteis</span> (cozinha, closet, sala)
+          </li>
+        </ul>
+        <p className="pt-2">
+          Preferimos cumprir prazo com qualidade do que prometer 15 dias e atrasar 6 meses. 
+          Você recebe o prazo exato na <span className="underline font-bold decoration-luxury-gold/40 underline-offset-4">consultoria.</span>
+        </p>
+      </div>
+    )
   },
   {
-    question: "ATENDEM NA MINHA REGIÃO?",
-    answer: `Sim! Atendemos em duas regiões principais:
+    question: "Atendem minha região?",
+    answer: (
+      <div className="space-y-6">
+        <p className="font-bold">Sim! Atendemos em duas regiões principais:</p>
+        
+        <div className="space-y-2">
+          <p className="font-bold text-luxury-graphite">Sul-Fluminense:</p>
+          <p className="ml-4 font-bold">Volta Redonda, Barra Mansa, Resende, Porto Real, Pinheiral e região.</p>
+        </div>
 
-Sul-Fluminense:
-Volta Redonda, Barra Mansa, Resende, Porto Real, Pinheiral e região.
+        <div className="space-y-2">
+          <p className="font-bold text-luxury-graphite">Rio de Janeiro:</p>
+          <p className="ml-4 font-bold">Barra da Tijuca, Aterro do Flamengo e outras regiões do Rio.</p>
+        </div>
 
-Rio de Janeiro:
-Barra da Tijuca, Aterro do Flamengo e outras regiões do Rio.
-
-Maioria dos clientes é de Barra Mansa e Volta Redonda, mas estamos expandindo para o Rio. Se estiver em outro lugar, consulte nosso especialista.`
+        <p className="ml-8">
+          Maioria dos clientes são de Barra Mansa e Volta Redonda, mas estamos expandindo para o Rio. 
+          Se estiver em outro lugar, consulte nosso <span className="font-bold underline decoration-luxury-gold underline-offset-4">especialista.</span>
+        </p>
+      </div>
+    )
   },
   {
     question: "FAZEM PROJETO PERSONALIZADO?",
@@ -37,16 +61,28 @@ Não temos catálogo. Entendemos você, entendemos o espaço, criamos algo que r
 Quanto menor o espaço, mais inteligente o design. Otimizamos cada centímetro com móveis multifuncionais, verticalizando, desembaraçando. Espaço pequeno não é problema.`
   },
   {
-    question: "QUAL É O INVESTIMENTO APROXIMADO?",
-    answer: `Varia bastante: R$5.000 a R$50.000+ (depende tamanho, complexidade, materiais, design).
+    question: "Qual o investimento aproximado?",
+    answer: (
+      <div className="space-y-6">
+        <p className="font-bold">
+          Varia bastante: R$5.000 a R$50.000+ (depende tamanho, complexidade, materiais, design).
+        </p>
+        
+        <div className="space-y-2">
+          <p className="font-bold">Exemplos:</p>
+          <ul className="space-y-1 ml-4">
+            <li className="font-bold">- Armário personalizado: R$5-8k aproximadamente</li>
+            <li className="font-bold">- Closet: R$15-25k aproximadamente</li>
+            <li className="font-bold">- Cozinha completa: R$15-50k aproximadamente</li>
+            <li className="font-bold">- Múltiplos ambientes: R$50k+</li>
+          </ul>
+        </div>
 
-Exemplos:
-- Armário personalizado: R$5-8k aproximadamente
-- Closet: R$15-25k aproximadamente
-- Cozinha completa: R$15-50k aproximadamente
-- Múltiplos ambientes: R$50k+
-
-Orçamento sem surpresa. O que a gente passa é o que você paga.`
+        <p className="font-bold">
+          Orçamento sem surpresa. O que a gente passa é o que você <span className="underline decoration-luxury-gold underline-offset-4">paga.</span>
+        </p>
+      </div>
+    )
   }
 ];
 
