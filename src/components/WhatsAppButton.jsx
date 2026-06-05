@@ -23,8 +23,8 @@ const WhatsAppButton = () => {
         'posicao': 'Fixo Flutuante',
         'texto_botao': 'Falar com especialista / Consultor'
       });
-    }
-  };
+      }
+    };
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleScroll);

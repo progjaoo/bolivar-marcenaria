@@ -15,14 +15,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-const handleNavClick = () => {
-  if (typeof window.gtag !== 'undefined') {
-    window.gtag('event', 'click_whatsapp', {
-      'posicao': 'Navbar Topo',
-      'texto_botao': 'WhatsApp Link'
-    });
-  }
-};
+  const handleNavClick = () => {
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'click_whatsapp', {
+        'posicao': 'Navbar Topo',
+        'texto_botao': 'WhatsApp Link'
+      });
+    }
+  };
   // Lock scroll and add class to body when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
