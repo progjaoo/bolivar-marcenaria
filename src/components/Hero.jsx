@@ -9,7 +9,8 @@ const Hero = () => {
     "Volta Redonda",
     "Resende",
     "Barra da Tijuca",
-    "Aterro do Flamengo"
+    "Aterro do Flamengo",
+    "Porto Real"
   ];
 
   return (

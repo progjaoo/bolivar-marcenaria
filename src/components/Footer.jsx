@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="space-y-8">
             <span className="text-3xl font-serif tracking-tighter text-white">BOLIVAR MARCENARIA</span>
             <p className="text-white/40 font-light leading-relaxed max-w-xs">
-              Excelência em marcenaria de alto padrão, unindo design autoral e precisão industrial para projetos exclusivos.
+              Excelência em marcenaria personalizada, unindo design autoral e precisão industrial para projetos exclusivos.
             </p>
             <div className="flex space-x-6 text-white/60">
               <a href="#" className="hover:text-luxury-gold transition-colors"><Share2 className="w-5 h-5" /></a>
