@@ -15,7 +15,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+const handleNavClick = () => {
+  if (typeof window.gtag !== 'undefined') {
+    window.gtag('event', 'click_whatsapp', {
+      'posicao': 'Navbar Topo',
+      'texto_botao': 'WhatsApp Link'
+    });
+  }
+};
   // Lock scroll and add class to body when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -158,6 +165,7 @@ const Navbar = () => {
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
+                  onClick={handleNavClick}
                   rel="noopener noreferrer"
                   className="inline-block px-10 py-5 bg-[#35A15D] hover:bg-[#2a8a4c] text-white text-[10px] tracking-[0.3em] uppercase hover:bg-luxury-gold transition-colors"
                 >

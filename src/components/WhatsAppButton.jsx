@@ -17,7 +17,14 @@ const WhatsAppButton = () => {
 
       setIsVisible(heroSection.getBoundingClientRect().bottom <= 0);
     };
-
+    const handleClick = () => {
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'click_whatsapp', {
+        'posicao': 'Fixo Flutuante',
+        'texto_botao': 'Falar com especialista / Consultor'
+      });
+    }
+  };
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleScroll);
