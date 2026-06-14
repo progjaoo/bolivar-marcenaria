@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
+import ProjectCTA from './ProjectCTA';
 
 const faqData = [
   {
@@ -171,6 +172,9 @@ const FAQ = () => {
               />
             ))}
           </motion.div>
+          <div className="mt-16 flex justify-center">
+            <ProjectCTA location="FAQ" />
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { WHATSAPP_URL } from '../utils/constants';
-import { FaWhatsapp } from 'react-icons/fa';
+import ProjectCTA from './ProjectCTA';
 
 const Hero = () => {
   const locations = [
@@ -12,14 +11,6 @@ const Hero = () => {
     "Aterro do Flamengo",
     "Porto Real"
   ];
-const handleHeroClick = () => {
-  if (typeof window.gtag !== 'undefined') {
-    window.gtag('event', 'click_whatsapp', {
-      'posicao': 'Hero Topo',
-      'texto_botao': 'Comece seu projeto agora'
-    });
-  }
-};
   return (
     <section className="relative h-screen min-h-[970px] flex items-center justify-center overflow-hidden">
       {/* Background Image with Darker Overlay */}
@@ -81,16 +72,7 @@ const handleHeroClick = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            onClick={handleHeroClick}
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-luxury-green hover:bg-luxury-green/80 text-luxury-white font-bold px-10 py-5 text-sm tracking-[0.2em] uppercase transition-all duration-300 rounded-sm shadow-xl"
-          >
-            <FaWhatsapp className="h-5 w-5 flex-shrink-0" />
-            Comece seu projeto agora
-          </a>
+          <ProjectCTA location="Hero Topo" />
         </motion.div>
       </div>
 

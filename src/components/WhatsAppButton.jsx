@@ -17,6 +17,7 @@ const WhatsAppButton = () => {
 
       setIsVisible(heroSection.getBoundingClientRect().bottom <= 0);
     };
+    
     const handleClick = () => {
     if (typeof window.gtag !== 'undefined') {
       window.gtag('event', 'click_whatsapp', {

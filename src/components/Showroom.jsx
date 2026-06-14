@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Maximize2, ChevronLeft, ChevronRight } from 'lucide-react';
+import ProjectCTA from './ProjectCTA';
 
 import cozinha1 from '../assets/cozinha/cozinha1.jpeg';
 import cozinha2 from '../assets/cozinha/cozinha2.jpeg';
@@ -211,6 +212,9 @@ const Showroom = () => {
               />
             ))}
           </div>
+        </div>
+        <div className="mt-16 flex justify-center">
+          <ProjectCTA location="Ambientes" />
         </div>
       </div>
       <AnimatePresence>

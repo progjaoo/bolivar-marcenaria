@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { WHATSAPP_URL } from '../utils/constants';
-import { FaWhatsapp } from 'react-icons/fa';
+import ProjectCTA from './ProjectCTA';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,14 +14,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const handleNavClick = () => {
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'click_whatsapp', {
-        'posicao': 'Navbar Topo',
-        'texto_botao': 'WhatsApp Link'
-      });
-    }
-  };
   // Lock scroll and add class to body when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -104,18 +95,13 @@ const Navbar = () => {
               {link.name} 
             </a>
           ))}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-6 py-3 border text-[10px] tracking-[0.2em] uppercase transition-all duration-500 ${
-              isScrolled
-                ? 'border-luxury-graphite text-luxury-graphite hover:bg-luxury-graphite hover:text-white'
-                : 'border-white text-white hover:bg-white hover:text-luxury-graphite'
-            }`}
-          >
-            Solicitar Projeto Exclusivo
-          </a>
+          <ProjectCTA
+            location="Navbar Topo"
+            label="Comece seu projeto agora"
+            variant="navbar"
+            isScrolled={isScrolled}
+            showIcon={false}
+          />
         </div>
 
         {/* Mobile Toggle Button */}
@@ -162,15 +148,11 @@ const Navbar = () => {
               ))}
 
               <motion.div variants={linkVariants} className="pt-6">
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  onClick={handleNavClick}
-                  rel="noopener noreferrer"
-                  className="inline-block px-10 py-5 bg-[#35A15D] hover:bg-[#2a8a4c] text-white text-[10px] tracking-[0.3em] uppercase hover:bg-luxury-gold transition-colors"
-                >
-                  Comece seu projeto agora
-                </a>
+                <ProjectCTA
+                  location="Menu Mobile"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-[10px] tracking-[0.3em]"
+                />
               </motion.div>
             </div>
 

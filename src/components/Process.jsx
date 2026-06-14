@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import ProjectCTA from './ProjectCTA';
 
 const Process = () => {
   const steps = [
@@ -57,6 +58,9 @@ const Process = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+        <div className="mt-20 flex justify-center">
+          <ProjectCTA location="Processo" />
         </div>
       </div>
     </section>

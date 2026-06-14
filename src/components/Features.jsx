@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { Cpu, Award, Users } from 'lucide-react';
+import ProjectCTA from './ProjectCTA';
 
 const Features = () => {
   const features = [
@@ -45,6 +46,9 @@ const Features = () => {
               </p>
             </motion.div>
           ))}
+        </div>
+        <div className="mt-20 flex justify-center">
+          <ProjectCTA location="Diferenciais" />
         </div>
       </div>
     </section>

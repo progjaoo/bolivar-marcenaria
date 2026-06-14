@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import ProjectCTA from './ProjectCTA';
 
 const testimonials = [
   {
@@ -208,6 +209,9 @@ const Testimonials = () => {
               />
             ))}
           </div>
+        </div>
+        <div className="mt-16 flex justify-center">
+          <ProjectCTA location="Depoimentos" />
         </div>
       </div>
 

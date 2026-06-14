@@ -1,13 +1,13 @@
 
 import { motion } from 'framer-motion';
 import fotoFamilia from '../assets/familiabolivar4k.png';
+import ProjectCTA from './ProjectCTA';
 
 const Concept = () => {
   return (
     <section id="sobre" className="py-24 md:py-32 bg-luxury-offwhite">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-          {/* Left Column: Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -63,6 +63,9 @@ const Concept = () => {
               className="h-[1px] w-32 bg-luxury-gold mt-12"
             />
           </motion.div>
+        </div>
+        <div className="mt-20 flex justify-center">
+          <ProjectCTA location="Sobre Nós" />
         </div>
       </div>
     </section>
