@@ -52,12 +52,12 @@ const faqData = [
     )
   },
   {
-    question: "FAZEM PROJETO PERSONALIZADO?",
+    question: "Fazem projetos personalizados?",
     answer: `100%. Cada projeto é único, feito especificamente para você e seu espaço.
 Não temos catálogo. Entendemos você, entendemos o espaço, criamos algo que reflete sua identidade e dura décadas.`
   },
   {
-    question: "TRABALHAM COM APARTAMENTOS PEQUENOS?",
+    question: "Trabalham com apartamentos pequenos?",
     answer: `Sim. Na verdade é especialidade nossa.
 Quanto menor o espaço, mais inteligente o design. Otimizamos cada centímetro com móveis multifuncionais, verticalizando, desembaraçando. Espaço pequeno não é problema.`
   },
