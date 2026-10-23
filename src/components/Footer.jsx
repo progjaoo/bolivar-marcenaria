@@ -78,7 +78,7 @@ const Footer = () => {
             © {new Date().getFullYear()} BOLIVAR MARCENARIA. Todos os direitos reservados.
           </p>
           <div className="flex space-x-8 text-white/30 text-xs font-light tracking-widest uppercase">
-            <a href="https://portfolio-dev-ten-phi.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-white">Desenvolvido por: João Marcos Valente</a>
+            <a href="https://www.bravite.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-white">Desenvolvido por: João Marcos Valente</a>
           </div>
         </div>
       </div>
